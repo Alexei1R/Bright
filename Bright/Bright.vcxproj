@@ -26,19 +26,19 @@
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -76,7 +76,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>brpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLFW_INCLUDE_NONE;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
@@ -96,7 +96,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>brpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>;_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLFW_INCLUDE_NONE;_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -120,7 +120,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>brpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>;_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLFW_INCLUDE_NONE;_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -143,6 +143,10 @@
     <ClInclude Include="src\Bright.h" />
     <ClInclude Include="src\Bright\Core\Application.h" />
     <ClInclude Include="src\Bright\Core\EntryPoint.h" />
+    <ClInclude Include="src\Bright\Core\Input.h" />
+    <ClInclude Include="src\Bright\Core\KeyCodes.h" />
+    <ClInclude Include="src\Bright\Core\Layer.h" />
+    <ClInclude Include="src\Bright\Core\LayerStack.h" />
     <ClInclude Include="src\Bright\Core\Log.h" />
     <ClInclude Include="src\Bright\Core\Window.h" />
     <ClInclude Include="src\Bright\Core\macros.h" />
@@ -150,6 +154,8 @@
     <ClInclude Include="src\Bright\Event\Event.h" />
     <ClInclude Include="src\Bright\Event\KeyEvent.h" />
     <ClInclude Include="src\Bright\Event\MouseEvent.h" />
+    <ClInclude Include="src\Bright\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Bright\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Bright\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\brpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
@@ -517,7 +523,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Bright\Core\Application.cpp" />
+    <ClCompile Include="src\Bright\Core\Layer.cpp" />
+    <ClCompile Include="src\Bright\Core\LayerStack.cpp" />
     <ClCompile Include="src\Bright\Core\Log.cpp" />
+    <ClCompile Include="src\Bright\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\Bright\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Bright\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\brpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

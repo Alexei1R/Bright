@@ -60,7 +60,7 @@ workspace "Bright"
 
 		------defines------
 		defines{
-			""
+			"GLFW_INCLUDE_NONE"
 		}
 
 		------includedirs------
@@ -100,6 +100,13 @@ workspace "Bright"
 			defines "_DIST"
 			runtime "Release"
 			optimize "on"
+
+
+
+
+
+
+
 	--------------------------------
 	--Game make with Bright engine--
 	--------------------------------
@@ -129,6 +136,7 @@ workspace "Bright"
 		includedirs{
 			"%{prj.name}/src/",
 			"Bright/src/",
+			"Bright/vendor/",
 			"Bright/vendor/spdlog/include"
 		}
 

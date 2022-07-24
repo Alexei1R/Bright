@@ -41,6 +41,7 @@ namespace Bright
 		m_Data.Width = props.Width;
 		m_Data.Height = props.Height;
 
+
 		BR_INFO("Creating Window {0} , ({1}:{2})", props.Title, props.Width, props.Height)
 
 			if (!s_GLFWInitialized)
@@ -55,6 +56,10 @@ namespace Bright
 
 		m_Window = glfwCreateWindow(int(props.Width), int(props.Height), m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		BR_ASSERT(status,"Glad don't init")
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 

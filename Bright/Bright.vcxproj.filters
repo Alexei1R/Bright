@@ -13,6 +13,9 @@
     <Filter Include="src\Bright\Event">
       <UniqueIdentifier>{0DB71843-F9AF-3795-22E2-1C1A0E3A17A1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Bright\ImGui">
+      <UniqueIdentifier>{E6AA5B43-D2A3-7A95-FBD5-5F1AE72D5AA1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Bright\Platform">
       <UniqueIdentifier>{9068980C-FCC9-751A-8537-BCCCF197ACD9}</UniqueIdentifier>
     </Filter>
@@ -51,6 +54,18 @@
     <ClInclude Include="src\Bright\Core\EntryPoint.h">
       <Filter>src\Bright\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Bright\Core\Input.h">
+      <Filter>src\Bright\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bright\Core\KeyCodes.h">
+      <Filter>src\Bright\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bright\Core\Layer.h">
+      <Filter>src\Bright\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bright\Core\LayerStack.h">
+      <Filter>src\Bright\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\Bright\Core\Log.h">
       <Filter>src\Bright\Core</Filter>
     </ClInclude>
@@ -71,6 +86,12 @@
     </ClInclude>
     <ClInclude Include="src\Bright\Event\MouseEvent.h">
       <Filter>src\Bright\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bright\ImGui\ImGuiLayer.h">
+      <Filter>src\Bright\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bright\Platform\Windows\WindowsInput.h">
+      <Filter>src\Bright\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\Bright\Platform\Windows\WindowsWindow.h">
       <Filter>src\Bright\Platform\Windows</Filter>
@@ -1169,8 +1190,20 @@
     <ClCompile Include="src\Bright\Core\Application.cpp">
       <Filter>src\Bright\Core</Filter>
     </ClCompile>
+    <ClCompile Include="src\Bright\Core\Layer.cpp">
+      <Filter>src\Bright\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Bright\Core\LayerStack.cpp">
+      <Filter>src\Bright\Core</Filter>
+    </ClCompile>
     <ClCompile Include="src\Bright\Core\Log.cpp">
       <Filter>src\Bright\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Bright\ImGui\ImGuiLayer.cpp">
+      <Filter>src\Bright\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Bright\Platform\Windows\WindowsInput.cpp">
+      <Filter>src\Bright\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Bright\Platform\Windows\WindowsWindow.cpp">
       <Filter>src\Bright\Platform\Windows</Filter>

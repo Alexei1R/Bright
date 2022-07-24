@@ -1,5 +1,6 @@
 #pragma once
 #include "brpch.h"
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include "Bright/Core/Window.h"
 
