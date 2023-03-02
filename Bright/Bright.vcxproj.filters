@@ -60,6 +60,9 @@
     <ClInclude Include="src\Bright\Core\Application.h">
       <Filter>src\Bright\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Bright\Core\KeyCodes.h">
+      <Filter>src\Bright\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\Bright\Core\Layers\Layer.h">
       <Filter>src\Bright\Core\Layers</Filter>
     </ClInclude>
@@ -70,6 +73,9 @@
       <Filter>src\Bright\Core\Log</Filter>
     </ClInclude>
     <ClInclude Include="src\Bright\Core\Window.h">
+      <Filter>src\Bright\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bright\Core\icon.h">
       <Filter>src\Bright\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Bright\Core\macros.h">
@@ -1185,10 +1191,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Bright\Core\KeyCodes.h" />
-    <ClInclude Include="src\Bright\Renderer\Renderer.h" />
-    <ClInclude Include="src\Bright\Renderer\Buffer.h" />
-    <ClInclude Include="src\Platform\Window\OpenGLBuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Bright\Core\Application.cpp">
@@ -1203,6 +1205,9 @@
     <ClCompile Include="src\Bright\Core\Log\Log.cpp">
       <Filter>src\Bright\Core\Log</Filter>
     </ClCompile>
+    <ClCompile Include="src\Bright\Core\icon.cpp">
+      <Filter>src\Bright\Core</Filter>
+    </ClCompile>
     <ClCompile Include="src\Bright\ImGui\ImGuiLayer.cpp">
       <Filter>src\Bright\ImGui</Filter>
     </ClCompile>
@@ -1215,8 +1220,5 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Bright\Renderer\Renderer.cpp" />
-    <ClCompile Include="src\Bright\Renderer\Buffer.cpp" />
-    <ClCompile Include="src\Platform\Window\OpenGLBuffer.cpp" />
   </ItemGroup>
 </Project>

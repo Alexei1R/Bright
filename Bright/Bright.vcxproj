@@ -140,9 +140,6 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Platform\Window\OpenGLBuffer.h" />
-    <ClInclude Include="src\Bright\Renderer\Buffer.h" />
-    <ClInclude Include="src\Bright\Renderer\Renderer.h" />
     <ClInclude Include="src\Bright.h" />
     <ClInclude Include="src\Bright\Core\Application.h" />
     <ClInclude Include="src\Bright\Core\KeyCodes.h" />
@@ -150,6 +147,7 @@
     <ClInclude Include="src\Bright\Core\Layers\LayerStack.h" />
     <ClInclude Include="src\Bright\Core\Log\Log.h" />
     <ClInclude Include="src\Bright\Core\Window.h" />
+    <ClInclude Include="src\Bright\Core\icon.h" />
     <ClInclude Include="src\Bright\Core\macros.h" />
     <ClInclude Include="src\Bright\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Bright\Events\Event.h" />
@@ -523,13 +521,11 @@
     <ClInclude Include="vendor\stb_image\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Platform\Window\OpenGLBuffer.cpp" />
-    <ClCompile Include="src\Bright\Renderer\Buffer.cpp" />
-    <ClCompile Include="src\Bright\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Bright\Core\Application.cpp" />
     <ClCompile Include="src\Bright\Core\Layers\Layer.cpp" />
     <ClCompile Include="src\Bright\Core\Layers\LayerStack.cpp" />
     <ClCompile Include="src\Bright\Core\Log\Log.cpp" />
+    <ClCompile Include="src\Bright\Core\icon.cpp" />
     <ClCompile Include="src\Bright\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Platform\Window\OpenGLWindow.cpp" />
     <ClCompile Include="src\brpch.cpp">

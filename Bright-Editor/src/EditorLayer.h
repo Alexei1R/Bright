@@ -1,7 +1,15 @@
 #pragma once
 #include "Bright.h"
+#include "Paneles/Scripting/Scripting.h"
 
 namespace Bright {
+
+
+
+
+	
+
+
 	class EditorLayer : public Layer {
 	public:
 		EditorLayer();
@@ -15,10 +23,18 @@ namespace Bright {
 
 
 
+	private:
+		void DrawMenu();
+
 
 
 	private:
+		Scripting scripting;
 
 
 	};
+
+
+
+
 }

@@ -1,9 +1,61 @@
 #include "EditorLayer.h"
 
+
+
+
 namespace Bright {
 	EditorLayer::EditorLayer()
 		:Layer("EditorLayer")
 	{
+	}
+
+	void EditorLayer::DrawMenu() {
+
+
+
+		if (ImGui::BeginMenuBar())
+		{
+			if (ImGui::BeginMenu("File"))
+			{
+
+
+				if (ImGui::MenuItem("Open Fille"))
+				{
+					BR_INFO("Open Fille");
+				};
+				if (ImGui::MenuItem("Exit")) BR_INFO("Close");
+				ImGui::EndMenu();
+			}
+
+
+			if (ImGui::BeginMenu("Settings"))
+			{
+				if (ImGui::MenuItem("Open Settings"))
+				{
+					BR_TRACE("Settings Open")
+				};
+				ImGui::EndMenu();
+			}
+
+
+			if (ImGui::BeginMenu("Script"))
+			{
+				if (ImGui::MenuItem("New Script", "Ctrl+Shift+n")) {
+					BR_INFO("New Script");
+				};
+
+				if (ImGui::MenuItem("Save Script", "Ctrl+Shift+n")) {
+					BR_INFO("Save Script");
+				};
+
+
+				ImGui::EndMenu();
+			}
+
+
+
+			ImGui::EndMenuBar();
+		}
 	}
 
 
@@ -20,8 +72,6 @@ namespace Bright {
 	}
 	void EditorLayer::OnImGuiRender()
 	{
-
-		// Note: Switch this to true to enable dockspace
 		static bool dockingEnabled = true;
 		if (dockingEnabled) {
 			static bool dockspaceOpen = true;
@@ -29,9 +79,10 @@ namespace Bright {
 			bool opt_fullscreen = opt_fullscreen_persistant;
 			static ImGuiDockNodeFlags dockspace_flags = ImGuiDockNodeFlags_None;
 
-			// We are using the ImGuiWindowFlags_NoDocking flag to make the parent window not dockable into,
-			// because it would be confusing to have two docking targets within each others.
-			ImGuiWindowFlags window_flags = ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoDocking;
+			
+			
+
+			ImGuiWindowFlags window_flags = ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoDocking | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoScrollbar ;
 			if (opt_fullscreen)
 			{
 				ImGuiViewport* viewport = ImGui::GetMainViewport();
@@ -44,15 +95,9 @@ namespace Bright {
 				window_flags |= ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoNavFocus;
 			}
 
-			// When using ImGuiDockNodeFlags_PassthruCentralNode, DockSpace() will render our background and handle the pass-thru hole, so we ask Begin() to not render a background.
 			if (dockspace_flags & ImGuiDockNodeFlags_PassthruCentralNode)
 				window_flags |= ImGuiWindowFlags_NoBackground;
 
-			// Important: note that we proceed even if Begin() returns false (aka window is collapsed).
-			// This is because we want to keep our DockSpace() active. If a DockSpace() is inactive, 
-			// all active windows docked into it will lose their parent and become undocked.
-			// We cannot preserve the docking relationship between an active window and an inactive docking, otherwise 
-			// any change of dockspace/settings would lead to windows being stuck in limbo and never being visible.
 			ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0.0f, 0.0f));
 			ImGui::Begin("DockSpace Demo", &dockspaceOpen, window_flags);
 			ImGui::PopStyleVar();
@@ -68,32 +113,88 @@ namespace Bright {
 				ImGui::DockSpace(dockspace_id, ImVec2(0.0f, 0.0f), dockspace_flags);
 			}
 
-			if (ImGui::BeginMenuBar())
+
+			//Style
 			{
-				if (ImGui::BeginMenu("File"))
-				{
-					// Disabling fullscreen would allow the window to be moved to the front of other windows, 
-					// which we can't undo at the moment without finer window depth/z control.
-					//ImGui::MenuItem("Fullscreen", NULL, &opt_fullscreen_persistant);
+				ImGuiStyle& style = ImGui::GetStyle();
+				
+				style.WindowPadding = ImVec2(15, 15);
+				style.WindowRounding = 5.0f;
+				style.FramePadding = ImVec2(5, 5);
+				style.FrameRounding = 4.0f;
+				style.ItemSpacing = ImVec2(12, 8);
+				style.ItemInnerSpacing = ImVec2(8, 6);
+				style.IndentSpacing = 25.0f;
+				style.ScrollbarSize = 15.0f;
+				style.ScrollbarRounding = 10.0f;
+				style.GrabMinSize = 5.0f;
+				style.GrabRounding = 3.0f;
 
-					if (ImGui::MenuItem("Disable Docking"))
-					{
-						dockingEnabled = false;
-						BR_CRITICAL("Disable Docking")
-					};
-					if (ImGui::MenuItem("Exit")) BR_CRITICAL("Close");
-					ImGui::EndMenu();
-				}
+				style.TabRounding = 0.0f;
+				
+				
+				
+				style.Colors[ImGuiCol_Tab] = ImVec4(0.17f, 0.24f, 0.25f, 1.00f);
+				style.Colors[ImGuiCol_TabHovered] = ImVec4(0.29f, 0.35f, 0.36f, 1.00f);
+				style.Colors[ImGuiCol_TabActive] = ImVec4(0.17f, 0.24f, 0.25f, 1.00f);
+				style.Colors[ImGuiCol_DockingPreview] = ImVec4(0.46f, 0.56f, 0.55f, 0.70f);
+				style.Colors[ImGuiCol_TabUnfocusedActive] = ImVec4(0.16f, 0.20f, 0.21f, 1.00f);
 
-				ImGui::EndMenuBar();
+
+
+				style.Colors[ImGuiCol_FrameBg] = ImVec4(0.25f, 0.25f, 0.25f, 0.54f);
+				style.Colors[ImGuiCol_FrameBgHovered] = ImVec4(0.44f, 0.43f, 0.48f, 0.54f);
+				style.Colors[ImGuiCol_FrameBgActive] = ImVec4(0.44f, 0.43f, 0.48f, 0.54f);
+				style.Colors[ImGuiCol_TitleBgActive] = ImVec4(0.29f, 0.29f, 0.29f, 1.00f);
+				style.Colors[ImGuiCol_CheckMark] = ImVec4(0.23f, 0.67f, 0.29f, 0.84f);
+				style.Colors[ImGuiCol_SliderGrab] = ImVec4(0.56f, 0.56f, 0.56f, 1.00f);
+				style.Colors[ImGuiCol_SliderGrabActive] = ImVec4(0.70f, 0.70f, 0.71f, 1.00f);
+				style.Colors[ImGuiCol_Button] = ImVec4(0.27f, 0.46f, 0.48f, 0.40f);
+				style.Colors[ImGuiCol_ButtonHovered] = ImVec4(0.25f, 0.68f, 0.73f, 0.40f);
+				style.Colors[ImGuiCol_ButtonActive] = ImVec4(0.06f, 0.51f, 0.58f, 0.40f);
+				style.Colors[ImGuiCol_Header] = ImVec4(0.50f, 0.53f, 0.57f, 0.31f);
+				style.Colors[ImGuiCol_HeaderHovered] = ImVec4(0.56f, 0.72f, 0.72f, 0.31f);
+				style.Colors[ImGuiCol_HeaderActive] = ImVec4(0.60f, 0.86f, 0.88f, 0.31f);
+				style.Colors[ImGuiCol_SeparatorHovered] = ImVec4(0.24f, 0.53f, 0.54f, 0.67f);
+				style.Colors[ImGuiCol_SeparatorActive] = ImVec4(0.32f, 0.64f, 0.65f, 0.67f);
+				style.Colors[ImGuiCol_ResizeGrip] = ImVec4(0.19f, 0.19f, 0.19f, 0.20f);
+				style.Colors[ImGuiCol_ResizeGripHovered] = ImVec4(0.27f, 0.27f, 0.28f, 0.67f);
+				style.Colors[ImGuiCol_ResizeGripActive] = ImVec4(0.44f, 0.45f, 0.45f, 0.95f);
+				style.Colors[ImGuiCol_TextSelectedBg] = ImVec4(0.31f, 0.44f, 0.46f, 1.00f);
+				style.Colors[ImGuiCol_NavHighlight] = ImVec4(0.44f, 0.55f, 0.69f, 1.00f);
+
+
+
 			}
 
-			ImGui::Begin("Settings");
+			
 
-			ImGui::Text("Renderer2D Stats:");
 
-			ImGui::Image((void*)0, ImVec2{ 1280, 720 });
-			ImGui::End();
+			//**********************************************************************************************
+			
+			DrawMenu();
+		 
+			//**********************************************************************************************
+
+			
+
+			
+
+
+
+			//**********************************************************************************************
+			scripting.GetDrawData();
+			//**********************************************************************************************
+
+			//==
+			ImPlot::ShowDemoWindow();
+			//==
+
+
+
+
+
+			//End of all ImGui
 			ImGui::End();
 
 		}

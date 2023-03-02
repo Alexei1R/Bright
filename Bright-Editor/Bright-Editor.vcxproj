@@ -132,10 +132,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\EditorLayer.h" />
+    <ClInclude Include="src\Paneles\Scripting\Scripting.h" />
+    <ClInclude Include="src\Paneles\Scripting\TextEditor.h" />
+    <ClInclude Include="src\style\style.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\EditorApp.cpp" />
     <ClCompile Include="src\EditorLayer.cpp" />
+    <ClCompile Include="src\Paneles\Scripting\Scripting.cpp" />
+    <ClCompile Include="src\Paneles\Scripting\TextEditor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Bright\Bright.vcxproj">

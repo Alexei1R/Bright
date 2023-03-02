@@ -5,6 +5,8 @@
 #include "include/imgui.h"
 #include "include/imgui_impl_glfw.h"
 #include "include/imgui_impl_opengl3.h"
+#include "include/implot.h"
+
 
 #include <GLFW/glfw3.h>
 
@@ -22,6 +24,7 @@ namespace Bright {
 		// Setup Dear ImGui context
 		IMGUI_CHECKVERSION();
 		ImGui::CreateContext();
+		ImPlot::CreateContext();
 		ImGuiIO& io = ImGui::GetIO(); (void)io;
 		io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;       // Enable Keyboard Controls
 		//io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
@@ -55,6 +58,7 @@ namespace Bright {
 
 		ImGui_ImplOpenGL3_Shutdown();
 		ImGui_ImplGlfw_Shutdown();
+		ImPlot::DestroyContext();
 		ImGui::DestroyContext();
 	}
 
