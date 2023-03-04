@@ -54,20 +54,20 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>bin\Debug-windows-x86_64\ImGui\</OutDir>
-    <IntDir>bin-int\Debug-windows-x86_64\ImGui\</IntDir>
+    <OutDir>..\..\..\ScriptingEngine\vendor\lua\bin\Debug-windows-x86_64\ImGui\</OutDir>
+    <IntDir>..\..\..\ScriptingEngine\vendor\lua\bin-int\Debug-windows-x86_64\ImGui\</IntDir>
     <TargetName>ImGui</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>bin\Release-windows-x86_64\ImGui\</OutDir>
-    <IntDir>bin-int\Release-windows-x86_64\ImGui\</IntDir>
+    <OutDir>..\..\..\ScriptingEngine\vendor\lua\bin\Release-windows-x86_64\ImGui\</OutDir>
+    <IntDir>..\..\..\ScriptingEngine\vendor\lua\bin-int\Release-windows-x86_64\ImGui\</IntDir>
     <TargetName>ImGui</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
-    <OutDir>bin\Dist-windows-x86_64\ImGui\</OutDir>
-    <IntDir>bin-int\Dist-windows-x86_64\ImGui\</IntDir>
+    <OutDir>..\..\..\ScriptingEngine\vendor\lua\bin\Dist-windows-x86_64\ImGui\</OutDir>
+    <IntDir>..\..\..\ScriptingEngine\vendor\lua\bin-int\Dist-windows-x86_64\ImGui\</IntDir>
     <TargetName>ImGui</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
@@ -116,6 +116,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lapi.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lauxlib.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lcode.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lctype.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\ldebug.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\ldo.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lfunc.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lgc.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\ljumptab.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\llex.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\llimits.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lmem.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lobject.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lopcodes.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lopnames.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lparser.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lprefix.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lstate.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lstring.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\ltable.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\ltm.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lua.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\luaconf.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lualib.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lundump.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lvm.h" />
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lzio.h" />
     <ClInclude Include="include\imconfig.h" />
     <ClInclude Include="include\imgui.h" />
     <ClInclude Include="include\imgui_impl_glfw.h" />
@@ -129,6 +156,40 @@
     <ClInclude Include="include\imstb_truetype.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lapi.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lauxlib.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lbaselib.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lcode.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lcorolib.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lctype.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\ldblib.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\ldebug.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\ldo.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\ldump.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lfunc.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lgc.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\linit.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\liolib.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\llex.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lmathlib.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lmem.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\loadlib.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lobject.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lopcodes.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\loslib.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lparser.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lstate.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lstring.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lstrlib.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\ltable.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\ltablib.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\ltm.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lua.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\luac.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lundump.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lutf8lib.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lvm.c" />
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lzio.c" />
     <ClCompile Include="include\imgui.cpp" />
     <ClCompile Include="include\imgui_demo.cpp" />
     <ClCompile Include="include\imgui_draw.cpp" />

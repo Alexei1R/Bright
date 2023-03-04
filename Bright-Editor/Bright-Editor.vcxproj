@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>BR_PLATFORM_WINDOWS;BR_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Bright\vendor\spdlog\include;..\Bright\src;..\Bright\vendor;..\Bright\vendor\glm;..\Bright\vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Bright\vendor\spdlog\include;..\Bright\src;..\Bright\vendor;..\ScriptingEngine\src;..\Bright\vendor\glm;..\Bright\vendor\imgui;..\ScriptingEngine\vendor\lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -95,7 +95,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>BR_PLATFORM_WINDOWS;BR_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Bright\vendor\spdlog\include;..\Bright\src;..\Bright\vendor;..\Bright\vendor\glm;..\Bright\vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Bright\vendor\spdlog\include;..\Bright\src;..\Bright\vendor;..\ScriptingEngine\src;..\Bright\vendor\glm;..\Bright\vendor\imgui;..\ScriptingEngine\vendor\lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -115,7 +115,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>BR_PLATFORM_WINDOWS;BR_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Bright\vendor\spdlog\include;..\Bright\src;..\Bright\vendor;..\Bright\vendor\glm;..\Bright\vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Bright\vendor\spdlog\include;..\Bright\src;..\Bright\vendor;..\ScriptingEngine\src;..\Bright\vendor\glm;..\Bright\vendor\imgui;..\ScriptingEngine\vendor\lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -145,6 +145,9 @@
   <ItemGroup>
     <ProjectReference Include="..\Bright\Bright.vcxproj">
       <Project>{85BF1DAA-7161-4880-5A1C-5CD4465DCFD0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ScriptingEngine\ScriptingEngine.vcxproj">
+      <Project>{AEAF97F9-1A3B-05BE-234C-88B28F5661BE}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

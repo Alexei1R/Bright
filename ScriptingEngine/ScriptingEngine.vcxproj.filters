@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ScriptingEngine">
+      <UniqueIdentifier>{AEAF97F9-1A3B-05BE-234C-88B28F5661BE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ScriptingEngine\Core">
+      <UniqueIdentifier>{C6D01760-B25F-A129-5B7E-B52447ECB1CF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ScriptingEngine\Core\Lua">
+      <UniqueIdentifier>{57DC9955-4301-E9D5-6C4C-CE6558D0E7F3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ScriptingEngine.h" />
+    <ClInclude Include="src\ScriptingEngine\Core\Lua\LuaAPI.h">
+      <Filter>ScriptingEngine\Core\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ScriptingEngine\Core\SREngine.h">
+      <Filter>ScriptingEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\srpch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ScriptingEngine\Core\Lua\LuaAPI.cpp">
+      <Filter>ScriptingEngine\Core\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ScriptingEngine\Core\SREngine.cpp">
+      <Filter>ScriptingEngine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\srpch.cpp" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ScriptingEngine">
+      <UniqueIdentifier>{AEAF97F9-1A3B-05BE-234C-88B28F5661BE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ScriptingEngine\vendor">
+      <UniqueIdentifier>{4B168F3B-3710-B88D-207D-4E9E0C161EFA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ScriptingEngine\vendor\lua">
+      <UniqueIdentifier>{7CE492FE-68F4-3ECF-D1AD-A3EDBDDC2D68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ScriptingEngine\vendor\lua\lua">
+      <UniqueIdentifier>{2D63441E-1989-0E85-02CF-9350EE933351}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{89AF369E-F58E-B539-FEA6-40106A051C9B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lapi.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lauxlib.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lcode.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lctype.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\ldebug.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\ldo.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lfunc.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lgc.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\ljumptab.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\llex.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\llimits.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lmem.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lobject.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lopcodes.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lopnames.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lparser.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lprefix.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lstate.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lstring.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\ltable.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\ltm.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lua.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\luaconf.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lualib.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lundump.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lvm.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ScriptingEngine\vendor\lua\lua\lzio.h">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imconfig.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imgui.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imgui_impl_glfw.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imgui_impl_opengl3.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imgui_impl_opengl3_loader.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imgui_internal.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\implot.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\implot_internal.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imstb_rectpack.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imstb_textedit.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imstb_truetype.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lapi.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lauxlib.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lbaselib.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lcode.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lcorolib.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lctype.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\ldblib.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\ldebug.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\ldo.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\ldump.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lfunc.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lgc.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\linit.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\liolib.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\llex.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lmathlib.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lmem.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\loadlib.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lobject.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lopcodes.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\loslib.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lparser.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lstate.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lstring.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lstrlib.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\ltable.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\ltablib.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\ltm.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lua.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\luac.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lundump.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lutf8lib.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lvm.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ScriptingEngine\vendor\lua\lua\lzio.c">
+      <Filter>ScriptingEngine\vendor\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="include\imgui.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="include\imgui_demo.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="include\imgui_draw.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="include\imgui_impl_glfw.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="include\imgui_impl_opengl3.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="include\imgui_tables.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="include\imgui_widgets.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="include\implot.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="include\implot_demo.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="include\implot_items.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
