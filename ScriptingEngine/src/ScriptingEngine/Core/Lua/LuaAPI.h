@@ -7,13 +7,16 @@
 namespace Bright {
 	class LuaAPI {
 	public:
-		LuaAPI();
-		~LuaAPI();
-
+		
+		void Init();
+		void Shutdown();
 		void Run(std::string script);
-		void AddScriptFunction(std::string name, std::function<void()>& function);
+		void AddLuaFunction(std::string name, int (*function)(lua_State*));
 		
 
+
+	public:
+		lua_State* GetLuaState() { return L; };
 
 	private:
 

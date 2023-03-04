@@ -1,34 +1,48 @@
 #pragma once
 #include "srpch.h"
+#include "Lua/LuaAPI.h"
 
 namespace Bright {
 
+	struct FunctionARG
+	{
+		std::string name;
+		int (*function)(lua_State*);
+
+
+	};
+
 	class SREngine {
+	public:
+		SREngine();
+		~SREngine();
+
 
 	public:
-		static std::string InitScript();
-		static std::string ShutdownScript();
+		
+		void Restart();
 
 	public:
-		static std::string OpenScript();
-		static std::string RunScript(std::string script);
-		static bool SaveScript(std::string path,std::string script);
-		static bool ReloadScript(std::string path,std::string script);
+		std::string OpenScript();
+		void RunScript(std::string script);
+		bool SaveScript(std::string path,std::string script);
+		bool ReloadScript(std::string path,std::string script);
 
 	public:
-		static void AddScriptFunction(std::string name, std::function<void()>& function); 
+		void AddScriptFunction(std::string name , int (*function)(lua_State*));
 		
 
 
 
-
+	private:
+		void InitScript();
+		void ShutdownScript();
 
 
 	private:
 
-
-
-
+		Bright::LuaAPI m_Lua;
+		std::vector<FunctionARG> m_FunctionARG;
 
 
 	};
