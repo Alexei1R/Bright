@@ -23,18 +23,19 @@ namespace Bright {
 		
 	}
 
-	void LuaAPI::Run(std::string script)
+	std::string LuaAPI::Run(std::string script)
 	{
 		
-		//std::string errors;
+		std::string errors;
 		
 		int error = luaL_loadstring(L, script.c_str());
 
 		if (error)
 		{
 			std::cerr << "Failed to load Lua code: " << lua_tostring(L, -1) << std::endl;
-			//errors = lua_tostring(L, -1);
-			lua_close(L);
+			errors = lua_tostring(L, -1);
+			//lua_close(L);
+			return errors;
 		}
 
 		// Call the Lua code
@@ -43,11 +44,12 @@ namespace Bright {
 		if (error)
 		{
 			std::cerr << "Failed to run Lua code: " << lua_tostring(L, -1) << std::endl;
-			//errors = errors + lua_tostring(L, -1);
-			lua_close(L);
+			errors = errors + lua_tostring(L, -1);
+			//lua_close(L);
+			return errors;
 		}
 		std::cout << "Lua code Executed";
-		
+		return errors;
 	}
 
 	void LuaAPI::AddLuaFunction(std::string name, int (*function)(lua_State*))

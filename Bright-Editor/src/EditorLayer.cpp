@@ -7,6 +7,14 @@ namespace Bright {
 	EditorLayer::EditorLayer()
 		:Layer("EditorLayer")
 	{
+		script = new SREngine();
+		scripting = new Scripting(script);
+	}
+
+	EditorLayer::~EditorLayer()
+	{
+		delete script;
+		delete scripting;
 	}
 
 	void EditorLayer::DrawMenu() {
@@ -183,7 +191,7 @@ namespace Bright {
 
 
 			//**********************************************************************************************
-			scripting.GetDrawData();
+			scripting->GetDrawData();
 			//**********************************************************************************************
 
 			//==

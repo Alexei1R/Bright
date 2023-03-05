@@ -10,7 +10,7 @@ namespace Bright {
 		
 		void Init();
 		void Shutdown();
-		void Run(std::string script);
+		std::string Run(std::string script);
 		void AddLuaFunction(std::string name, int (*function)(lua_State*));
 		
 

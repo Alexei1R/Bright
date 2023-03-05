@@ -1,5 +1,6 @@
 #pragma once
 #include "Bright.h"
+#include "ScriptingEngine.h"
 #include "TextEditor.h"
 
 
@@ -7,13 +8,15 @@
 
 namespace Bright {
 
+	
+
 	class Scripting {
 	public:
-		Scripting();
+		Scripting(SREngine* script);
 
 		void GetDrawData();
 
-
+		std::pair<int, std::string> ParseError(std::string error);
 
 
 	private:
@@ -26,6 +29,7 @@ namespace Bright {
 		GLuint m_ImportTexture = 0;
 		GLuint m_OpenTexture = 0;
 		GLuint m_SaveTexture = 0;
+		SREngine* m_Script;
 
 
 	};

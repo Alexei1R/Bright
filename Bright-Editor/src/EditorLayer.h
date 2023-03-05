@@ -1,6 +1,8 @@
 #pragma once
 #include "Bright.h"
+#include "ScriptingEngine.h"
 #include "Paneles/Scripting/Scripting.h"
+
 
 namespace Bright {
 
@@ -13,6 +15,7 @@ namespace Bright {
 	class EditorLayer : public Layer {
 	public:
 		EditorLayer();
+		~EditorLayer();
 
 
 		virtual void OnAttach()override;
@@ -29,8 +32,8 @@ namespace Bright {
 
 
 	private:
-		Scripting scripting;
-
+		Scripting* scripting;
+		SREngine* script;
 
 	};
 

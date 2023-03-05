@@ -40,7 +40,7 @@ namespace Bright {
         return std::string();
     }
 
-    void SREngine::RunScript(std::string script)
+    std::string SREngine::RunScript(std::string script)
     {
         lua_State* L= m_Lua.GetLuaState();
         for (auto& it : m_FunctionARG) {
@@ -49,7 +49,7 @@ namespace Bright {
         m_FunctionARG.clear();
 
        
-        m_Lua.Run(script);
+        return m_Lua.Run(script);
     }
 
     bool SREngine::SaveScript(std::string path, std::string script)

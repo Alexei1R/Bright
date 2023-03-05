@@ -24,7 +24,7 @@ namespace Bright {
 
 	public:
 		std::string OpenScript();
-		void RunScript(std::string script);
+		std::string RunScript(std::string script);
 		bool SaveScript(std::string path,std::string script);
 		bool ReloadScript(std::string path,std::string script);
 
