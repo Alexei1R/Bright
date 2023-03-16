@@ -132,6 +132,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\EditorLayer.h" />
+    <ClInclude Include="src\Paneles\Plotter\Plotter.h" />
     <ClInclude Include="src\Paneles\Scripting\Scripting.h" />
     <ClInclude Include="src\Paneles\Scripting\TextEditor.h" />
     <ClInclude Include="src\style\style.h" />
@@ -139,6 +140,7 @@
   <ItemGroup>
     <ClCompile Include="src\EditorApp.cpp" />
     <ClCompile Include="src\EditorLayer.cpp" />
+    <ClCompile Include="src\Paneles\Plotter\Plotter.cpp" />
     <ClCompile Include="src\Paneles\Scripting\Scripting.cpp" />
     <ClCompile Include="src\Paneles\Scripting\TextEditor.cpp" />
   </ItemGroup>

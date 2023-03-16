@@ -9,12 +9,17 @@ namespace Bright {
 	{
 		script = new SREngine();
 		scripting = new Scripting(script);
+
+		//Plotter
+		Plotter::SetSREngine(script);
+		
 	}
 
 	EditorLayer::~EditorLayer()
 	{
 		delete script;
 		delete scripting;
+		Plotter::PlottFreeMemory();
 	}
 
 	void EditorLayer::DrawMenu() {
@@ -74,9 +79,8 @@ namespace Bright {
 	{
 	}
 	void EditorLayer::OnUpdate()
-
-
 	{
+
 	}
 	void EditorLayer::OnImGuiRender()
 	{
@@ -192,6 +196,7 @@ namespace Bright {
 
 			//**********************************************************************************************
 			scripting->GetDrawData();
+			Plotter::GetDrawData();
 			//**********************************************************************************************
 
 			//==

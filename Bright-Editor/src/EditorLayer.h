@@ -2,6 +2,7 @@
 #include "Bright.h"
 #include "ScriptingEngine.h"
 #include "Paneles/Scripting/Scripting.h"
+#include "Paneles/Plotter/Plotter.h"
 
 
 namespace Bright {
@@ -32,8 +33,8 @@ namespace Bright {
 
 
 	private:
-		Scripting* scripting;
 		SREngine* script;
+		Scripting* scripting;
 
 	};
 

@@ -6,24 +6,7 @@
 namespace Bright {
 
 
-	int plot(lua_State* L)
-	{
-		// Get the table argument from the Lua stack
-		luaL_checktype(L, 1, LUA_TTABLE);
-
-		// Loop through the table and print each element
-		int table_len = luaL_len(L, 1);
-		for (int i = 1; i <= table_len; i++)
-		{
-			lua_pushinteger(L, i);
-			lua_gettable(L, 1);
-			float data = (float)lua_tonumber(L, -1);
-			std::cout << data << std::endl;
-			lua_pop(L, 1);
-		}
-
-		return 0;
-	}
+	
 
 
 	Scripting::Scripting(SREngine* script)
@@ -33,6 +16,29 @@ namespace Bright {
 		m_TextEditor.SetReadOnly(false);
 		m_TextEditor.SetPalette(TextEditor::GetDarkPalette());
 		m_TextEditor.SetLanguageDefinition(TextEditor::LanguageDefinition::Lua());
+		m_TextEditor.SetText(R"(
+print("\nstart")
+local arr = {}
+
+V = 12
+R = 0.75
+L = 50
+--m_Out = (V/R)*(1-exp((-m_Counter)*R/L));
+function ChargeInductance(i)
+	return ((V/R)*(1-math.exp((-i)*R/L)))
+
+end
+x = 0
+-- Fill the array with random integers
+for i = 1, 2000 do
+x = x + 0.1
+arr[i] =  math.sin(x)--ChargeInductance(i)
+end
+plot(arr)
+print("stop")
+
+
+)");
 
 
 		//lOAD IMAGES ICONS
@@ -79,8 +85,7 @@ namespace Bright {
 			if (ImGui::ImageButton((void*)(intptr_t)m_StartTexture, ImVec2(25, 25), ImVec2(0.0f, 0.0f), ImVec2(1.0f, 1.0f), 1, ImVec4(0.0f, 0.0f, 0.0f, 0.0f), ImVec4(1.0f, 1.0f, 1.0f, 1.0f))) {
 
 
-				m_Script->Restart();
-				m_Script->AddScriptFunction("plot", plot);
+				
 				std::thread th(
 					[&]()
 					{
@@ -91,13 +96,16 @@ namespace Bright {
 								std::string err = m_Script->RunScript(data.c_str());
 								if (!err.empty()) {
 									BR_CRITICAL("{0}", err);
-									TextEditor::ErrorMarkers markers;
+									
 									//BR_CRITICAL("\n{0}", e.line);
 									//BR_CRITICAL("\n{0}", e.error);
 									//std::pair<int, std::string> errors((int)(e.line), (std::string)e.error);
 									markers.insert(ParseError(err));
 									//ParseError(err);
 									m_TextEditor.SetErrorMarkers(markers);
+								}
+								else {
+									markers.clear();
 								}
 							}
 							catch (const std::exception& e) {

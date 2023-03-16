@@ -30,7 +30,7 @@ namespace Bright {
 		GLuint m_OpenTexture = 0;
 		GLuint m_SaveTexture = 0;
 		SREngine* m_Script;
-
+		TextEditor::ErrorMarkers markers;
 
 	};
 

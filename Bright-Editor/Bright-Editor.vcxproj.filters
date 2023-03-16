@@ -4,6 +4,9 @@
     <Filter Include="Paneles">
       <UniqueIdentifier>{4DC136FC-B9A0-B597-C2B8-406E2E171CF9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Paneles\Plotter">
+      <UniqueIdentifier>{A62A261F-12B6-93E3-1BC7-16D887D1EFE3}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Paneles\Scripting">
       <UniqueIdentifier>{8FFA855D-FB10-84F3-4488-0F15B0DD547B}</UniqueIdentifier>
     </Filter>
@@ -13,6 +16,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\EditorLayer.h" />
+    <ClInclude Include="src\Paneles\Plotter\Plotter.h">
+      <Filter>Paneles\Plotter</Filter>
+    </ClInclude>
     <ClInclude Include="src\Paneles\Scripting\Scripting.h">
       <Filter>Paneles\Scripting</Filter>
     </ClInclude>
@@ -26,6 +32,9 @@
   <ItemGroup>
     <ClCompile Include="src\EditorApp.cpp" />
     <ClCompile Include="src\EditorLayer.cpp" />
+    <ClCompile Include="src\Paneles\Plotter\Plotter.cpp">
+      <Filter>Paneles\Plotter</Filter>
+    </ClCompile>
     <ClCompile Include="src\Paneles\Scripting\Scripting.cpp">
       <Filter>Paneles\Scripting</Filter>
     </ClCompile>
