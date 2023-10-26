@@ -48,6 +48,28 @@ namespace Bright {
 			(*--it)->OnEvent(e);
 			if (e.Handled)
 				break;
+
+			if (e.GetEventType() == Bright::EventType::KeyPressed) {
+				// Cast the event to KeyPressedEvent
+				Bright::KeyPressedEvent& keyPressedEvent = dynamic_cast<Bright::KeyPressedEvent&>(e);
+
+				// Access the key code from the event
+				int keyCode = keyPressedEvent.GetKeyCode();
+
+				//BR_INFO("Key Pressed: {0}", keyCode);
+			}
+
+
+			if (e.GetEventType() == Bright::EventType::MouseMoved) {
+				// Cast the event to KeyPressedEvent
+				Bright::MouseMovedEvent& maouseMovedEvent = dynamic_cast<Bright::MouseMovedEvent&>(e);
+
+				// Access the key code from the event
+				int x = maouseMovedEvent.GetX();
+				int y = maouseMovedEvent.GetY();
+
+				//BR_INFO("Mouse x{0} : y{1}", x,y);
+			}
 		}
 	}
 

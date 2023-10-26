@@ -195,13 +195,9 @@ namespace Bright {
 
 
 			//**********************************************************************************************
-			scripting->GetDrawData();
-			Plotter::GetDrawData();
+			//scripting->GetDrawData();
+			//Plotter::GetDrawData();
 			//**********************************************************************************************
-
-			//==
-			ImPlot::ShowDemoWindow();
-			//==
 
 
 
