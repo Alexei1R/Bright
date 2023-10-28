@@ -3,6 +3,7 @@
 #include "glad/glad.h"
 
 #include "include/imgui.h"
+#include "Platform/Renderer/Model.h"
 
 namespace Bright {
 	Application* Application::s_Instance = nullptr;
@@ -17,6 +18,9 @@ namespace Bright {
 
 		m_ImGuiLayer = new ImGuiLayer();
 		PushOverlay(m_ImGuiLayer);
+
+		model.loadModel("C:/Users/alexe/OneDrive/Desktop/Code/Bright/ASSETS/Model/car.fbx");
+		
 	}
 
 

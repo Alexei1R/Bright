@@ -10,6 +10,9 @@
     <Filter Include="Paneles\Scripting">
       <UniqueIdentifier>{8FFA855D-FB10-84F3-4488-0F15B0DD547B}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
     <Filter Include="style">
       <UniqueIdentifier>{16AF6110-82C3-89C1-4B45-2D21B71886F2}</UniqueIdentifier>
     </Filter>
@@ -41,5 +44,10 @@
     <ClCompile Include="src\Paneles\Scripting\TextEditor.cpp">
       <Filter>Paneles\Scripting</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Platform\Renderer">
+      <Filter>Platform</Filter>
+    </None>
   </ItemGroup>
 </Project>

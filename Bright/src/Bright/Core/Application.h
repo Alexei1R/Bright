@@ -4,6 +4,8 @@
 #include "Bright/Core/Layers/Layer.h"
 #include "Bright/Core/Layers/LayerStack.h"
 #include "Bright/ImGui/ImGuiLayer.h"
+#include "Platform/Renderer/Model.h"
+
 
 namespace Bright {
 	class Application {
@@ -37,6 +39,8 @@ namespace Bright {
 		Window* m_Window;
 		LayerStack m_LayerStack;
 		ImGuiLayer* m_ImGuiLayer;
+
+		Core::Model model;
 
 	};
 }

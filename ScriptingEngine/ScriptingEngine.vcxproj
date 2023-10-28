@@ -147,6 +147,9 @@
     <ProjectReference Include="..\Bright\Bright.vcxproj">
       <Project>{85BF1DAA-7161-4880-5A1C-5CD4465DCFD0}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Bright\vendor\assimp\assimp.vcxproj">
+      <Project>{724885F2-5EEA-AFC8-47A5-C31C33E63619}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

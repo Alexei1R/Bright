@@ -15,6 +15,7 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Bright/vendor/GLFW/include"
 IncludeDir["Glad"] = "Bright/vendor/Glad/include"
+IncludeDir["assimp"] = "Bright/vendor/assimp/include"
 IncludeDir["ImGui"] = "Bright/vendor/imgui"
 IncludeDir["glm"] = "Bright/vendor/glm"
 IncludeDir["stb_image"] = "Bright/vendor/stb_image"
@@ -24,6 +25,7 @@ group "Dependencies"
 	include "Bright/vendor/GLFW"
 	include "Bright/vendor/Glad"
 	include "Bright/vendor/imgui"
+	include "Bright/vendor/assimp"
 	include "ScriptingEngine/vendor/lua"
 group ""
 
@@ -51,6 +53,8 @@ project "Bright"
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/src/Platform/Renderer/**.h",
+		"%{prj.name}/src/Platform/Renderer/**.cpp",
 		"%{prj.name}/vendor/stb_image/**.h",
 		"%{prj.name}/vendor/stb_image/**.cpp",
 		"%{prj.name}/vendor/glm/glm/**.hpp",
@@ -65,12 +69,14 @@ project "Bright"
 	includedirs
 	{
 		"%{prj.name}/src",
+		"%{prj.name}/src/Platform/Renderer",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.glm}",
-		"%{IncludeDir.stb_image}"
+		"%{IncludeDir.stb_image}",
+		"%{IncludeDir.assimp}"
 	}
 
 	links 
@@ -78,7 +84,8 @@ project "Bright"
 		"GLFW",
 		"Glad",
 		"ImGui",
-		"opengl32.lib"
+		"opengl32.lib",
+		"assimp"
 	}
 
 	filter "system:windows"
@@ -145,7 +152,8 @@ location "ScriptingEngine"
 
 	links
 	{
-		"Bright"
+		"Bright",
+		"assimp"
 	}
 
 	filter "system:windows"
@@ -193,7 +201,8 @@ project "Bright-Editor"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/src/Platform/Renderer",
 	}
 
 	includedirs
@@ -202,10 +211,15 @@ project "Bright-Editor"
 		"Bright/src",
 		"Bright/vendor",
 		"ScriptingEngine/src",
-		"%{IncludeDir.glm}",
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.stb_image}",
+		"%{IncludeDir.assimp}",
 		"%{IncludeDir.lua}",
 	}
+	
 
 	links
 	{
