@@ -60,6 +60,8 @@ namespace Bright {
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 		SetCallbacks();
+		// Enables the Depth Buffer
+		glEnable(GL_DEPTH_TEST);
 	}
 	//close window
 	void OpenGLWindow::Shutdown()

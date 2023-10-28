@@ -3,8 +3,9 @@
 
 
 
+
 namespace Bright {
-	EditorLayer::EditorLayer()
+	EditorLayer::EditorLayer(unsigned int framebuffer)
 		:Layer("EditorLayer")
 	{
 		script = new SREngine();
@@ -12,6 +13,7 @@ namespace Bright {
 
 		//Plotter
 		Plotter::SetSREngine(script);
+		this->m_FrameBuffer = framebuffer;
 		
 	}
 
@@ -187,12 +189,17 @@ namespace Bright {
 			DrawMenu();
 		 
 			//**********************************************************************************************
-
+			
 			
 
 			
 
+			ImGui::Begin("Settings");
 
+			ImGui::Text("Renderer2D Stats:");
+
+			ImGui::Image((void*)m_FrameBuffer, ImVec2{ 1280, 720 });
+			ImGui::End();
 
 			//**********************************************************************************************
 			/*scripting->GetDrawData();

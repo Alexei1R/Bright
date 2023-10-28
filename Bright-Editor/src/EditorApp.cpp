@@ -9,7 +9,8 @@ namespace Bright {
 	class EditorApp : public Application {
 	public:
 		EditorApp() {
-			PushLayer(new EditorLayer());
+			
+			PushLayer(new EditorLayer(this->GetFrameBuffer()));
 		}
 		~EditorApp() {}
 	};

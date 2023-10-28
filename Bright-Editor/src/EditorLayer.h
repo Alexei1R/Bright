@@ -15,7 +15,7 @@ namespace Bright {
 
 	class EditorLayer : public Layer {
 	public:
-		EditorLayer();
+		EditorLayer(unsigned int framebuffer);
 		~EditorLayer();
 
 
@@ -26,13 +26,15 @@ namespace Bright {
 		virtual void OnEvent(Event& event) override;
 
 
-
 	private:
 		void DrawMenu();
 
 
 
 	private:
+
+
+		unsigned int m_FrameBuffer;
 		SREngine* script;
 		Scripting* scripting;
 

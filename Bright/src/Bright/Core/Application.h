@@ -26,6 +26,7 @@ namespace Bright {
 		inline  Window& GetWindow() { return *m_Window; }
 	public:
 		void OnEvent(Event& e);
+		unsigned int GetFrameBuffer() { return framebufferTexture; }
 
 
 	public:
@@ -47,6 +48,8 @@ namespace Bright {
 		Core::Shader* shader;
 		Core::Camera* camera;
 		Core::Transform* transform;
+		unsigned int FBO;
+		unsigned int framebufferTexture;
 		
 
 
