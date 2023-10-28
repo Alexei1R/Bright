@@ -154,9 +154,13 @@
     <ClInclude Include="src\Bright\Events\KeyEvent.h" />
     <ClInclude Include="src\Bright\Events\MouseEvent.h" />
     <ClInclude Include="src\Bright\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Platform\Renderer\Camera.h" />
     <ClInclude Include="src\Platform\Renderer\Mesh.h" />
     <ClInclude Include="src\Platform\Renderer\Model.h" />
     <ClInclude Include="src\Platform\Renderer\Shader.h" />
+    <ClInclude Include="src\Platform\Renderer\Transform.h" />
+    <ClInclude Include="src\Platform\Renderer\keyboard.h" />
+    <ClInclude Include="src\Platform\Renderer\mouse.h" />
     <ClInclude Include="src\Platform\Window\OpenGLWindow.h" />
     <ClInclude Include="src\brpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
@@ -530,9 +534,13 @@
     <ClCompile Include="src\Bright\Core\Log\Log.cpp" />
     <ClCompile Include="src\Bright\Core\icon.cpp" />
     <ClCompile Include="src\Bright\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\Platform\Renderer\Camera.cpp" />
     <ClCompile Include="src\Platform\Renderer\Mesh.cpp" />
     <ClCompile Include="src\Platform\Renderer\Model.cpp" />
     <ClCompile Include="src\Platform\Renderer\Shader.cpp" />
+    <ClCompile Include="src\Platform\Renderer\Transform.cpp" />
+    <ClCompile Include="src\Platform\Renderer\keyboard.cpp" />
+    <ClCompile Include="src\Platform\Renderer\mouse.cpp" />
     <ClCompile Include="src\Platform\Window\OpenGLWindow.cpp" />
     <ClCompile Include="src\brpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

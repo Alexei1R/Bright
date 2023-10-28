@@ -99,6 +99,9 @@
     <ClInclude Include="src\Bright\ImGui\ImGuiLayer.h">
       <Filter>src\Bright\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\Renderer\Camera.h">
+      <Filter>src\Platform\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Renderer\Mesh.h">
       <Filter>src\Platform\Renderer</Filter>
     </ClInclude>
@@ -106,6 +109,15 @@
       <Filter>src\Platform\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\Renderer\Shader.h">
+      <Filter>src\Platform\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Renderer\Transform.h">
+      <Filter>src\Platform\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Renderer\keyboard.h">
+      <Filter>src\Platform\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Renderer\mouse.h">
       <Filter>src\Platform\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\Window\OpenGLWindow.h">
@@ -1223,6 +1235,9 @@
     <ClCompile Include="src\Bright\ImGui\ImGuiLayer.cpp">
       <Filter>src\Bright\ImGui</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Renderer\Camera.cpp">
+      <Filter>src\Platform\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Renderer\Mesh.cpp">
       <Filter>src\Platform\Renderer</Filter>
     </ClCompile>
@@ -1230,6 +1245,15 @@
       <Filter>src\Platform\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Renderer\Shader.cpp">
+      <Filter>src\Platform\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Renderer\Transform.cpp">
+      <Filter>src\Platform\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Renderer\keyboard.cpp">
+      <Filter>src\Platform\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Renderer\mouse.cpp">
       <Filter>src\Platform\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Window\OpenGLWindow.cpp">

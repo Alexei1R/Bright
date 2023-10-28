@@ -115,6 +115,7 @@ namespace Bright {
 	
 		glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int mods)
 			{
+				Keyboard::keyCallback(window, key, scancode, action, mods);
 				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 	
 				switch (action)
@@ -150,6 +151,8 @@ namespace Bright {
 	
 		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods)
 			{
+
+				Mouse::mouseButtonCallback(window, button, action, mods);
 				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 	
 				switch (action)
@@ -171,6 +174,8 @@ namespace Bright {
 	
 		glfwSetScrollCallback(m_Window, [](GLFWwindow* window, double xOffset, double yOffset)
 			{
+				Mouse::mouseWheelCallback(window, xOffset, yOffset);
+
 				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 	
 				MouseScrolledEvent event((float)xOffset, (float)yOffset);
@@ -179,8 +184,10 @@ namespace Bright {
 	
 		glfwSetCursorPosCallback(m_Window, [](GLFWwindow* window, double xPos, double yPos)
 			{
+				Mouse::cursorPosCallback(window,xPos,yPos);
+				
 				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
-	
+				
 				MouseMovedEvent event((float)xPos, (float)yPos);
 				data.EventCallback(event);
 			});

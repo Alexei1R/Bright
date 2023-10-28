@@ -5,6 +5,9 @@
 #include "Bright/Core/Layers/LayerStack.h"
 #include "Bright/ImGui/ImGuiLayer.h"
 #include "Platform/Renderer/Model.h"
+#include "Platform/Renderer/Shader.h"
+#include "Platform/Renderer/Camera.h"
+#include "Platform/Renderer/Transform.h"
 
 
 namespace Bright {
@@ -40,7 +43,12 @@ namespace Bright {
 		LayerStack m_LayerStack;
 		ImGuiLayer* m_ImGuiLayer;
 
-		Core::Model model;
+		Core::Model* model;
+		Core::Shader* shader;
+		Core::Camera* camera;
+		Core::Transform* transform;
+		
+
 
 	};
 }

@@ -3,7 +3,6 @@
 #include "glad/glad.h"
 
 #include "include/imgui.h"
-#include "Platform/Renderer/Model.h"
 
 namespace Bright {
 	Application* Application::s_Instance = nullptr;
@@ -19,7 +18,19 @@ namespace Bright {
 		m_ImGuiLayer = new ImGuiLayer();
 		PushOverlay(m_ImGuiLayer);
 
-		model.loadModel("C:/Users/alexe/OneDrive/Desktop/Code/Bright/ASSETS/Model/car.fbx");
+		camera = new Core::Camera(glm::vec3(0.0, 0.0, 3.0));
+
+
+		model = new Core::Model;
+
+
+		model->loadModel("C:/Users/alexe/OneDrive/Desktop/Code/Bright/ASSETS/Model/cube.obj");
+		
+
+		shader = new Core::Shader("C:/Users/alexe/OneDrive/Desktop/Code/Bright/ASSETS/Shader/vs.glsl", "C:/Users/alexe/OneDrive/Desktop/Code/Bright/ASSETS/Shader/fs.glsl");
+		transform = new Core::Transform(*shader);
+		transform->rotateRadians(-90, glm::vec3(1.0, 0.0, 0.0));
+		//transform->scale(glm::vec3(0.01, 0.01, 0.01));
 		
 	}
 
@@ -71,6 +82,7 @@ namespace Bright {
 				// Access the key code from the event
 				int x = maouseMovedEvent.GetX();
 				int y = maouseMovedEvent.GetY();
+				
 
 				//BR_INFO("Mouse x{0} : y{1}", x,y);
 			}
@@ -79,22 +91,33 @@ namespace Bright {
 
 	void Application::Run()
 	{
+
+
 		while (isRunnig)
 		{
+
+			
 			glClearColor(0.1, 0.6, 0.3, 1.0);
-			glClear(GL_COLOR_BUFFER_BIT);
+			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 			for (Layer* layer : m_LayerStack)
 			{
 				layer->OnUpdate();
 			}
 
-			m_ImGuiLayer->Begin();
+			/*m_ImGuiLayer->Begin();
 			{
 				for (Layer* layer : m_LayerStack)
 					layer->OnImGuiRender();
 			}
-			m_ImGuiLayer->End();
+			m_ImGuiLayer->End();*/
+
+
+			transform->UpdateCam(camera->GetViewMatrix(), camera->GetCameraPos(), camera->GetCameraFront(), m_Window->GetWidth(), m_Window->GetHeight());
+			camera->Update();
+
+			shader->Bind();
+			model->Draw(*shader);
 
 
 

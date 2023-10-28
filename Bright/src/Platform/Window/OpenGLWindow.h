@@ -3,6 +3,8 @@
 #include "Bright/Core/Window.h"
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
+#include "Platform/Renderer/mouse.h"
+#include "Platform/Renderer/keyboard.h"
 
 
 namespace Bright {
